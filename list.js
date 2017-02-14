@@ -1,9 +1,12 @@
+console.log("loading")
 if (typeof S3BL_IGNORE_PATH == 'undefined' || S3BL_IGNORE_PATH != true) {
+  console.log("ignoring path")
   var S3BL_IGNORE_PATH = false;
 }
 
 if (typeof BUCKET_URL == 'undefined') {
   var BUCKET_URL = location.protocol + '//' + location.hostname;
+  console.log("no url, using: ", BUCKET_URL)
 }
 
 if (typeof BUCKET_NAME != 'undefined') {
